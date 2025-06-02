@@ -30,7 +30,7 @@ public class TokenController {
                 return  new ResponseEntity<>(JwtResponseDTO.builder().
                         accessToken(jwtService.GenerateToken(authRequestDTO.getUsername())).token(refreshToken.getToken()).build(), HttpStatus.OK);
             }else{
-                return   new ResponseEntity<>("Exception in User service",HttpStatus.INTERNAL_SERVER_ERROR);
+                return    new ResponseEntity<>("Exception in User service",HttpStatus.INTERNAL_SERVER_ERROR);
             }
     }
     @PostMapping("auth/v1/refreshToken")
